@@ -17,13 +17,23 @@
     header {
       background: #000000;
       color: #FFD700;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 1rem;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    header h1 {
+    .logo-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .logo-title img {
+      height: 80px;
+      width: auto;
+    }
+    .logo-title h1 {
       margin: 0;
-      font-weight: 700;
       font-size: 2.5rem;
     }
     main {
@@ -76,8 +86,11 @@
       box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
     }
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
+      .logo-title h1 {
+        font-size: 1.6rem;
+      }
+      .logo-title img {
+        height: 60px;
       }
       section {
         padding: 1rem;
@@ -87,7 +100,10 @@
 </head>
 <body>
   <header>
-    <h1>🎓 USCHS 20-Year Reunion – Class of 2005</h1>
+    <div class="logo-title">
+      <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
+      <h1>USCHS 20-Year Reunion<br>Class of 2005</h1>
+    </div>
   </header>
   <main>
     <section>
