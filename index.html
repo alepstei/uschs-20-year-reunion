@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>USCHS 20-Year Reunion</title>
+  <title>Upper St. Clair High School Class of 2005 20-Year Reunion</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -27,6 +26,7 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 1rem;
+      text-align: left;
     }
     .logo-title img {
       height: 80px;
@@ -34,10 +34,33 @@
     }
     .logo-title h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2rem;
+      line-height: 1.3;
+    }
+    .top-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      background: #ffffff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    }
+    .top-buttons a {
+      text-decoration: none;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      padding: 0.8rem 1.4rem;
+      border-radius: 30px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      transition: background-color 0.3s;
+    }
+    .top-buttons a:hover {
+      background: #e6c200;
     }
     main {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
@@ -85,9 +108,28 @@
       min-height: 2400px;
       box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
     }
+    .lineup-cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: space-between;
+    }
+    .day-card {
+      flex: 1;
+      min-width: 280px;
+      background: #fefefe;
+      border: 2px solid #FFD700;
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .day-card h3 {
+      margin-top: 0;
+      color: #FFD700;
+    }
     @media (max-width: 600px) {
       .logo-title h1 {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
       }
       .logo-title img {
         height: 60px;
@@ -102,41 +144,57 @@
   <header>
     <div class="logo-title">
       <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
-      <h1>USCHS 20-Year Reunion<br>Class of 2005</h1>
+      <h1>Upper St. Clair High School<br>Class of 2005 20-Year Reunion</h1>
     </div>
   </header>
+
+  <div class="top-buttons">
+    <a href="#rsvp">RSVP Now</a>
+    <a href="#pay">Pay Now – $25</a>
+    <a href="#lineup">Weekend Line Up</a>
+  </div>
+
   <main>
-    <section>
-      <h2>🎉 Weekend Lineup</h2>
-      <h3>📍 Friday, 9/19</h3>
-      <ul>
-        <li><strong>🍔 Pre-Game at the MAC (Adults + Families):</strong> Casual hangout at USC MAC with food and drinks.</li>
-        <li><strong>🏈 USC Home Football Game – 7 PM:</strong> Panthers vs. McKeesport. Free tickets!</li>
-        <li><strong>🍻 Post-Game Drinks (Adults Only):</strong> Location TBD — stay tuned for updates.</li>
-      </ul>
-      <h3>📍 Saturday, 9/20</h3>
-      <ul>
-        <li><strong>🏫 USCHS Tour – 11 AM:</strong> Come walk the halls and relive the memories.</li>
-        <li><strong>🍹 Adults-Only Night Out at Gordo’s:</strong> Food, drinks, and laughs hosted by Brian Gorder at Gordo’s Tacos & Tequila on Mt. Washington.</li>
-      </ul>
-    </section>
-    <section>
-      <h2>✅ RSVP</h2>
-      <p>Please fill out the form below to RSVP for each event.</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQbW4PA0sCmQpUDkoOfx-PJJEvrqUP6492g_LOqq9Nm2JakA/viewform?embedded=true" scrolling="yes"></iframe>
-    </section>
-    <section>
-      <h2>💸 Pay Your $25 Reunion Fee</h2>
-      <p>We're collecting <strong>$25 per couple</strong> for the weekend.</p>
-      <p>Send payment via Venmo:</p>
-      <a href="https://venmo.com/jaclynasher-epstein" class="btn-venmo" target="_blank" rel="noopener noreferrer">Pay with Venmo</a>
-    </section>
-    <section>
+    <section id="updates">
       <h2>📣 Updates</h2>
       <ul>
         <li><strong>7/16:</strong> Please RSVP now and share this link with fellow classmates.</li>
         <li><strong>7/3:</strong> Cost is $25 per couple. Drinks at Gordo’s will be a cash bar.</li>
       </ul>
+    </section>
+
+    <section id="lineup">
+      <h2>🎉 Weekend Lineup</h2>
+      <div class="lineup-cards">
+        <div class="day-card">
+          <h3>📍 Friday, 9/19</h3>
+          <ul>
+            <li><strong>🍔 Pre-Game at the McLaughlin Run Activity Center (MAC):</strong> Hang out with food and drinks at <a href="https://www.google.com/maps?q=1770+McLaughlin+Run+Rd,+Upper+St+Clair,+PA+15241" target="_blank">1770 McLaughlin Run Rd</a> with families.</li>
+            <li><strong>🏈 Football Game – 7 PM:</strong> Cheer for USC vs. McKeesport. Free tickets.</li>
+            <li><strong>🍻 Post-Game Drinks (Adults Only):</strong> Location TBD.</li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <h3>📍 Saturday, 9/20</h3>
+          <ul>
+            <li><strong>🏫 USCHS Tour – 11 AM:</strong> Walk the halls and relive the memories.</li>
+            <li><strong>🍹 Reunion (Adults-Only):</strong> Hosted by Brian Gorder at <a href="https://gordospgh.com/" target="_blank">Gordo’s Tacos & Tequila</a> on Mt. Washington.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <h2>✅ RSVP</h2>
+      <p>Please fill out the form below to RSVP for each event.</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQbW4PA0sCmQpUDkoOfx-PJJEvrqUP6492g_LOqq9Nm2JakA/viewform?embedded=true" scrolling="yes"></iframe>
+    </section>
+
+    <section id="pay">
+      <h2>💸 Pay Your $25 Reunion Fee</h2>
+      <p>We're collecting <strong>$25 per couple</strong> for the weekend.</p>
+      <p>Send payment via Venmo:</p>
+      <a href="https://venmo.com/jaclynasher-epstein" class="btn-venmo" target="_blank" rel="noopener noreferrer">Pay with Venmo</a>
     </section>
   </main>
 </body>
