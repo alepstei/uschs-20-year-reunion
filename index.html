@@ -14,28 +14,29 @@
       line-height: 1.6;
     }
     header {
+      position: relative;
       background: #000000;
       color: #FFD700;
-      padding: 2rem 1rem 1rem;
+      padding: 3.5rem 1rem 2rem;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      min-height: 110px;
     }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-      text-align: left;
-    }
-    .logo-title img {
-      height: 80px;
+    header img {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      height: 90px;
       width: auto;
     }
-    .logo-title h1 {
+    header h1 {
       margin: 0;
-      font-size: 2rem;
-      line-height: 1.3;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 0.5rem;
     }
     .top-buttons {
       display: flex;
@@ -128,11 +129,11 @@
       color: #FFD700;
     }
     @media (max-width: 600px) {
-      .logo-title h1 {
-        font-size: 1.4rem;
+      header h1 {
+        font-size: 2rem;
       }
-      .logo-title img {
-        height: 60px;
+      header img {
+        height: 70px;
       }
       section {
         padding: 1rem;
@@ -142,10 +143,11 @@
 </head>
 <body>
   <header>
-    <div class="logo-title">
-      <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
-      <h1>Upper St. Clair High School<br>Class of 2005 20-Year Reunion</h1>
-    </div>
+    <img
+      src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png"
+      alt="USC Panther Logo"
+    />
+    <h1>Upper St. Clair High School<br />Class of 2005 20-Year Reunion</h1>
   </header>
 
   <div class="top-buttons">
@@ -169,7 +171,7 @@
         <div class="day-card">
           <h3>📍 Friday, 9/19</h3>
           <ul>
-            <li><strong>🍔 Pre-Game at the McLaughlin Run Activity Center (MAC):</strong> Hang out with food and drinks at <a href="https://www.google.com/maps?q=1770+McLaughlin+Run+Rd,+Upper+St+Clair,+PA+15241" target="_blank">1770 McLaughlin Run Rd</a> with families.</li>
+            <li><strong>🍔 Pre-Game at the McLaughlin Run Activity Center (MAC):</strong> Hang out with food and drinks at <a href="https://www.google.com/maps?q=1770+McLaughlin+Run+Rd,+Upper+St+Clair,+PA+15241" target="_blank" rel="noopener">1770 McLaughlin Run Rd</a> with families.</li>
             <li><strong>🏈 Football Game – 7 PM:</strong> Cheer for USC vs. McKeesport. Free tickets.</li>
             <li><strong>🍻 Post-Game Drinks (Adults Only):</strong> Location TBD.</li>
           </ul>
@@ -178,7 +180,7 @@
           <h3>📍 Saturday, 9/20</h3>
           <ul>
             <li><strong>🏫 USCHS Tour – 11 AM:</strong> Walk the halls and relive the memories.</li>
-            <li><strong>🍹 Reunion (Adults-Only):</strong> Hosted by Brian Gorder at <a href="https://gordospgh.com/" target="_blank">Gordo’s Tacos & Tequila</a> on Mt. Washington.</li>
+            <li><strong>🍹 Reunion (Adults-Only):</strong> Hosted by Brian Gorder at <a href="https://gordospgh.com/" target="_blank" rel="noopener">Gordo’s Tacos & Tequila</a> on Mt. Washington.</li>
           </ul>
         </div>
       </div>
