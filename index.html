@@ -228,6 +228,31 @@
       transform: scale(1.1);
       box-shadow: 0 6px 16px rgba(255,215,0,0.8);
     }
+
+    /* Countdown Timer Styles */
+    #countdown {
+      background: #111;
+      border-left: 6px solid #FFD700;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(255,215,0,0.3);
+      color: #FFD700;
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+    #timer {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 2.4rem;
+      margin-top: 0.5rem;
+      letter-spacing: 0.1em;
+    }
+    #timer span {
+      display: inline-block;
+      min-width: 50px;
+    }
+
     @keyframes fadeIn {
       from { opacity: 0; }
       to { opacity: 1; }
@@ -273,6 +298,17 @@
         <li><strong>7/16:</strong> Please RSVP now and share this link with fellow classmates.</li>
         <li><strong>7/3:</strong> Cost is $25 per couple. Drinks at Gordo’s will be a cash bar.</li>
       </ul>
+    </section>
+
+    <!-- Countdown Timer Section -->
+    <section id="countdown">
+      <h2>⏳ Countdown to Reunion</h2>
+      <div id="timer">
+        <span id="days">00</span> days
+        <span id="hours">00</span> hrs
+        <span id="minutes">00</span> mins
+        <span id="seconds">00</span> secs
+      </div>
     </section>
 
     <section id="lineup">
@@ -324,5 +360,33 @@
       <a class="button" href="https://venmo.com/jaclynasher-epstein" target="_blank" rel="noopener noreferrer">Pay Now on Venmo</a>
     </section>
   </main>
+
+  <script>
+    const countdownDate = new Date('September 19, 2025 19:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = countdownDate - now;
+
+      if (distance < 0) {
+        document.getElementById('countdown').innerHTML = "<h2>🎉 The reunion is happening now!</h2>";
+        clearInterval(timerInterval);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById('days').textContent = days.toString().padStart(2, '0');
+      document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+      document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+      document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+    }
+
+    updateCountdown();
+    const timerInterval = setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
