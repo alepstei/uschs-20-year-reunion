@@ -9,25 +9,28 @@
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      background: #f8f8f8;
+      background: url('https://static.wikia.nocookie.net/logo-timeline/images/b/b8/Upper_St_Clair.jpg/revision/latest?cb=20240820232030') no-repeat center center fixed;
+      background-size: cover;
       color: #000000;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     header {
       position: relative;
-      background: #000000;
+      background: rgba(0, 0, 0, 0.85);
       color: #FFD700;
       padding: 3.5rem 1rem 2rem;
       text-align: center;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      min-height: 110px;
+      overflow: hidden;
     }
     header img {
-      position: fixed;
+      position: absolute;
       top: 10px;
       left: 10px;
       height: 90px;
       width: auto;
+      animation: slideInLeft 1.2s ease-out;
     }
     header h1 {
       margin: 0;
@@ -37,6 +40,15 @@
       margin-left: auto;
       margin-right: auto;
       padding-top: 0.5rem;
+      animation: fadeInDown 1.4s ease-out;
+    }
+    @keyframes slideInLeft {
+      from { transform: translateX(-100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { transform: translateY(-30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
     .top-buttons {
       display: flex;
@@ -44,8 +56,9 @@
       flex-wrap: wrap;
       gap: 1rem;
       padding: 1rem;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.95);
       box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      animation: fadeIn 1.8s ease-in;
     }
     .top-buttons a {
       text-decoration: none;
@@ -55,15 +68,19 @@
       padding: 0.8rem 1.4rem;
       border-radius: 30px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, transform 0.2s;
     }
     .top-buttons a:hover {
       background: #e6c200;
+      transform: scale(1.05);
     }
     main {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      animation: fadeIn 2.2s ease-in;
     }
     section {
       background: #ffffff;
@@ -72,6 +89,7 @@
       box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
       margin-bottom: 2rem;
       padding: 1.5rem 2rem;
+      animation: fadeInUp 1.6s ease-in;
     }
     h2 {
       color: #FFD700;
@@ -87,20 +105,6 @@
     }
     ul li {
       margin-bottom: 0.7rem;
-    }
-    .btn-venmo {
-      display: inline-block;
-      background-color: #FFD700;
-      color: #000000;
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
-      transition: background-color 0.3s ease;
-    }
-    .btn-venmo:hover {
-      background-color: #e6c200;
     }
     iframe {
       width: 100%;
@@ -123,10 +127,23 @@
       border-radius: 12px;
       padding: 1rem 1.5rem;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      animation: zoomIn 1.4s ease-in;
     }
     .day-card h3 {
       margin-top: 0;
       color: #FFD700;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
     @media (max-width: 600px) {
       header h1 {
@@ -143,30 +160,28 @@
 </head>
 <body>
   <header>
-    <img
-      src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png"
-      alt="USC Panther Logo"
-    />
+    <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
     <h1>Upper St. Clair High School<br />Class of 2005 20-Year Reunion</h1>
   </header>
 
   <div class="top-buttons">
-    <a href="#lineup">Weekend Lineup</a>
-    <a href="#rsvp">RSVP Now</a>
-    <a href="https://venmo.com/jaclynasher-epstein" target="_blank" rel="noopener noreferrer">Pay Now – $25</a>
+    <a href="#lineup">📅 Weekend Lineup</a>
+    <a href="#rsvp">📝 RSVP Now</a>
+    <a href="https://venmo.com/jaclynasher-epstein" target="_blank" rel="noopener noreferrer">💸 Pay Now – $25</a>
   </div>
 
   <main>
     <section id="updates">
       <h2>📣 Updates</h2>
       <ul>
+        <li><strong>7/28:</strong> Added Venmo payment link. After you RSVP please pay now.</li>
         <li><strong>7/16:</strong> Please RSVP now and share this link with fellow classmates.</li>
         <li><strong>7/3:</strong> Cost is $25 per couple. Drinks at Gordo’s will be a cash bar.</li>
       </ul>
     </section>
 
     <section id="lineup">
-      <h2>🎉 Weekend Lineup</h2>
+      <h2>🎊 Weekend Lineup</h2>
       <div class="lineup-cards">
         <div class="day-card">
           <h3>📍 Friday, 9/19</h3>
