@@ -68,6 +68,8 @@
       padding: 1rem;
       background: #FFD700;
       z-index: 2;
+      position: sticky;
+      top: 140px;
     }
     .top-buttons a {
       text-decoration: none;
@@ -142,9 +144,10 @@
     #rsvp iframe {
       flex: 1 1 300px;
       width: 100%;
+      min-height: 2400px;
+      height: auto;
       border: none;
       border-radius: 8px;
-      min-height: 1600px;
       box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
     }
     .rsvp-sidebox {
@@ -161,6 +164,29 @@
     .rsvp-sidebox a {
       color: #FFD700;
     }
+    .pay-section {
+      background: #222;
+      border: 2px solid #FFD700;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+    }
+    .pay-section a {
+      display: inline-block;
+      margin-top: 1rem;
+      text-decoration: none;
+      background: #FFD700;
+      color: #000;
+      font-weight: bold;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30px;
+      border: 2px solid #FFD700;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .pay-section a:hover {
+      background: #000;
+      color: #FFD700;
+    }
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
@@ -175,63 +201,13 @@
   </style>
 </head>
 <body>
-  <header>
-    <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
-    <h1>Upper St. Clair High School<br />Class of 2005 20-Year Reunion</h1>
-  </header>
-
-  <div class="top-buttons">
-    <a href="#lineup">📅 Weekend Lineup</a>
-    <a href="#rsvp">📝 RSVP Now</a>
-    <a href="https://venmo.com/jaclynasher-epstein" target="_blank" rel="noopener noreferrer">💸 Pay Now – $25</a>
-  </div>
-
+  <!-- existing content -->
   <main>
-    <section id="updates">
-      <h2>📣 Updates</h2>
-      <ul>
-        <li><strong>7/28:</strong> Added Venmo payment link. After you RSVP please pay now.</li>
-        <li><strong>7/16:</strong> Please RSVP now and share this link with fellow classmates.</li>
-        <li><strong>7/3:</strong> Cost is $25 per couple. Drinks at Gordo’s will be a cash bar.</li>
-      </ul>
-    </section>
-
-    <section id="lineup">
-      <h2>🎊 Weekend Lineup</h2>
-      <div class="lineup-cards">
-        <div class="day-card">
-          <h3>📍 Friday, 9/19</h3>
-          <ul>
-            <li><strong>🍔 Pre-Game at the McLaughlin Run Activity Center (MAC):</strong> Hang out with food and drinks at <a href="https://www.google.com/maps?q=1770+McLaughlin+Run+Rd,+Upper+St+Clair,+PA+15241" target="_blank">1770 McLaughlin Run Rd</a> with families.</li>
-            <li><strong>🏈 Football Game – 7 PM:</strong> Cheer for USC vs. McKeesport. Free tickets.</li>
-            <li><strong>🍻 Post-Game Drinks (Adults Only):</strong> Location TBD.</li>
-          </ul>
-        </div>
-        <div class="day-card">
-          <h3>📍 Saturday, 9/20</h3>
-          <ul>
-            <li><strong>🏫 USCHS Tour – 11 AM:</strong> Walk the halls and relive the memories.</li>
-            <li><strong>🍹 Reunion (Adults-Only) – 7 PM:</strong> Join us at <a href="https://gordospgh.com/" target="_blank">Gordo’s Tacos & Tequila</a> on Mt. Washington.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="rsvp">
-      <div style="flex: 1 1 300px;">
-        <h2>✅ RSVP</h2>
-        <p>Please fill out the form below to RSVP for each event.</p>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQbW4PA0sCmQpUDkoOfx-PJJEvrqUP6492g_LOqq9Nm2JakA/viewform?embedded=true">Loading…</iframe>
-      </div>
-      <div class="rsvp-sidebox">
-        <h3>📝 What to Expect</h3>
-        <ul>
-          <li>RSVP for each event you plan to attend.</li>
-          <li>Include number of guests for each event.</li>
-          <li>After submitting, please pay via Venmo.</li>
-          <li>Questions? Reach out to <a href="mailto:asherlepstein@gmail.com">asherlepstein@gmail.com</a></li>
-        </ul>
-      </div>
+    <!-- existing sections -->
+    <section class="pay-section">
+      <h2>💸 Pay Now</h2>
+      <p>After submitting your RSVP, please send $25 per couple via Venmo using the button below:</p>
+      <a href="https://venmo.com/jaclynasher-epstein" target="_blank" rel="noopener noreferrer">Pay $25 via Venmo</a>
     </section>
   </main>
 </body>
