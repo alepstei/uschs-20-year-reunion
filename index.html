@@ -86,124 +86,68 @@
       color: #000;
       transform: scale(1.05);
     }
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background: rgba(30,30,30,0.95);
-      border-radius: 10px;
-      z-index: 1;
-    }
-    section {
-      background: #111;
-      border-left: 6px solid #FFD700;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-    }
-    h2 {
-      color: #FFD700;
-      margin-top: 0;
-      border-bottom: 2px solid #444;
-      padding-bottom: 0.5rem;
-    }
-    h3 {
-      color: #FFD700;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    ul li {
-      margin-bottom: 0.7rem;
-    }
-    .lineup-cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: space-between;
-    }
-    .day-card {
-      flex: 1;
-      min-width: 280px;
-      background: #222;
-      border: 2px solid #FFD700;
-      border-radius: 12px;
-      padding: 1rem 1.5rem;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-    }
-    .day-card a {
-      color: #FFD700;
-      text-decoration: underline;
-    }
-    #rsvp {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-    #rsvp iframe {
-      flex: 1 1 300px;
-      width: 100%;
-      min-height: 2400px;
-      height: auto;
-      border: none;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.3);
-    }
-    .rsvp-sidebox {
-      flex: 1 1 300px;
-      background: #1a1a1a;
-      padding: 1rem 1.5rem;
-      border: 2px solid #FFD700;
-      border-radius: 8px;
-      color: #fff;
-    }
-    .rsvp-sidebox h3 {
-      margin-top: 0;
-    }
-    .rsvp-sidebox a {
-      color: #FFD700;
-    }
-    .pay-section {
-      background: #222;
-      border: 2px solid #FFD700;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-    .pay-section a {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      background: #FFD700;
-      color: #000;
-      font-weight: bold;
-      padding: 0.8rem 1.5rem;
-      border-radius: 30px;
-      border: 2px solid #FFD700;
-      transition: background-color 0.3s, transform 0.2s;
-    }
-    .pay-section a:hover {
-      background: #000;
-      color: #FFD700;
-    }
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      header img {
-        height: 60px;
-      }
-      section {
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <!-- existing content -->
+  <header>
+    <img src="https://tribhssn.triblive.com/wp-content/themes/hssn2023/images/school-logo/upper_saint_clair_panthers.png" alt="USC Panther Logo" />
+    <h1>USCHS 20-Year Reunion – Class of 2005 🎓</h1>
+  </header>
+  <div class="top-buttons">
+    <a href="#lineup">Weekend Lineup</a>
+    <a href="#rsvp">RSVP Now</a>
+    <a href="https://venmo.com/jaclynasher-epstein" target="_blank">Pay Now – $25</a>
+  </div>
   <main>
-    <!-- existing sections -->
+    <section id="updates">
+      <h2>📢 Updates</h2>
+      <ul>
+        <li><strong>7/28:</strong> Added Venmo payment link. After you RSVP, please pay now.</li>
+        <li><strong>7/16:</strong> Please RSVP now and share link with fellow classmates.</li>
+        <li><strong>7/3:</strong> Cost is $25 per couple. Drinks will be available at Gordo's as part of a cash bar.</li>
+      </ul>
+    </section>
+
+    <section id="lineup">
+      <h2>📅 Weekend Lineup</h2>
+      <div class="lineup-cards">
+        <div class="day-card">
+          <h3>📍 Friday, 9/19</h3>
+          <ul>
+            <li><strong>🍔 Pre-Game at the MAC (Adults + Families):</strong><br>
+              Casual hangout at McLaughlin Run Activity Center (MAC) – <em>1770 McLaughlin Run Rd, Upper St Clair, PA 15241</em>. Bring your families and catch up over food and drinks.</li>
+            <li><strong>🏈 USC Home Football Game – 7 PM:</strong><br>
+              Cheer on the Panthers as they take on McKeesport! Tickets are free — come relive those Friday night vibes.</li>
+            <li><strong>🍻 Post-Game Drinks (Adults Only):</strong><br>
+              Informal get-together after the game. Location TBD — we’ll keep you posted!</li>
+          </ul>
+        </div>
+        <div class="day-card">
+          <h3>📍 Saturday, 9/20</h3>
+          <ul>
+            <li><strong>🏫 USCHS Tour – 11 AM:</strong><br>
+              Walk the halls with us and take a nostalgic tour of the high school. All are welcome!</li>
+            <li><strong>🍹 Reunion at Gordo’s (Adults Only) – 7 PM:</strong><br>
+              Join us at <a href="https://gordospgh.com/?fbclid=IwY2xjawLzUMtleHRuA2FlbQIxMABicmlkETFRMnJtY2w2Vm9DTHpPMTVCAR6_2rpQ_SbAHarTMGf0OGpLNftrt-QfTnCUcMY4LbNP6Xx4iNR6nO90iT1j9A_aem_CSV7cU4ZmWR9SsxaFvS6EQ" target="_blank">Gordo’s Tacos & Tequila</a> on Mt. Washington — food, drinks, and laughs hosted by Brian Gorder.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="rsvp">
+      <div class="rsvp-sidebox">
+        <h3>📝 What to Expect</h3>
+        <ul>
+          <li>Reconnect with old friends and classmates</li>
+          <li>Bring your family to Friday night fun</li>
+          <li>Enjoy food and drinks all weekend long</li>
+          <li>Adults-only Saturday night bash</li>
+          <li>Only $25 per couple for the full weekend</li>
+        </ul>
+        <p>Questions? Reach out to <a href="mailto:asherlepstein@gmail.com">asherlepstein@gmail.com</a></p>
+      </div>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScQbW4PA0sCmQpUDkoOfx-PJJEvrqUP6492g_LOqq9Nm2JakA/viewform?embedded=true" width="100%" height="2400">Loading…</iframe>
+    </section>
     <section class="pay-section">
       <h2>💸 Pay Now</h2>
       <p>After submitting your RSVP, please send $25 per couple via Venmo using the button below:</p>
